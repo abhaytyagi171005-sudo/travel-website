@@ -1,0 +1,1241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: #f8f8f8;
+}
+
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #041d3d;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+
+.logo span {
+    color: #ffc107;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+nav ul a:hover,
+.active {
+    color: #ffc107;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 900px;
+    position: relative;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .45),
+            rgba(0, 0, 0, .45)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 120px 80px;
+}
+
+.hero-left {
+    max-width: 650px;
+    z-index: 2;
+    color: white;
+}
+
+.tagline {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.hero-left h1 {
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.hero-left h1 span {
+    display: block;
+    color: #ffc107;
+}
+
+.description {
+    margin-top: 25px;
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+/* BUTTONS */
+
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn-yellow {
+    background: #ffc107;
+    color: black;
+    padding: 18px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.btn-yellow:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 193, 7, .5);
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+    padding: 18px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: black;
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* STATS */
+
+.stats {
+    display: flex;
+    gap: 80px;
+
+    margin-top: 50px;
+
+    position: relative;
+    z-index: 10;
+}
+
+.stats h2 {
+    font-size: 50px;
+    color: #ffc107;
+}
+
+.stats p {
+    font-size: 18px;
+}
+
+/* FLOATING CARDS */
+
+.hero-right {
+    position: relative;
+    width: 550px;
+    height: 500px;
+}
+
+.card {
+    position: absolute;
+
+    width: 260px;
+    height: 180px;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+
+    transition: all .4s ease;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    z-index: 100;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* REMOVE THIS IF PRESENT */
+.card-text {
+    display: none;
+}
+
+.card1 {
+    top: -20px;
+    right: 80px;
+    transform: rotate(-8deg);
+}
+
+.card2 {
+    top: 110px;
+    right: -20px;
+    transform: rotate(8deg);
+}
+
+.card3 {
+    top: 240px;
+    right: 100px;
+    transform: rotate(-6deg);
+}
+
+/* WAVE */
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    background: white;
+
+    clip-path:
+        ellipse(70% 100% at 50% 100%);
+}
+
+/* DESTINATIONS */
+
+.destinations {
+    padding: 60px 80px 100px;
+}
+
+.destinations h4 {
+    color: #ffc107;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.destinations h2 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #0b1f40;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+    transition: .4s;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.destination-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.destination-content h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   EXPLORE PAGE PREMIUM
+========================= */
+
+.explore-header {
+
+    min-height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 150px 20px 80px;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .55),
+            rgba(0, 0, 0, .55)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.explore-header h1 {
+
+    font-size: 70px;
+    font-weight: 800;
+
+    color: #ffc107;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, .5);
+}
+
+.explore-header p {
+
+    max-width: 700px;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+/* FEATURED SECTION */
+
+.featured {
+
+    width: 90%;
+
+    height: 500px;
+
+    margin: 80px auto;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .35);
+}
+
+.featured img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.featured::before {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .2));
+}
+
+.featured-content {
+
+    position: absolute;
+
+    bottom: 50px;
+    left: 50px;
+
+    z-index: 5;
+
+    color: white;
+}
+
+.featured-content h3 {
+
+    color: #ffc107;
+
+    margin-bottom: 10px;
+}
+
+.featured-content h1 {
+
+    font-size: 80px;
+
+    margin-bottom: 15px;
+}
+
+.featured-content p {
+
+    max-width: 600px;
+
+    line-height: 1.8;
+}
+
+/* DESTINATIONS SECTION */
+
+.places {
+
+    padding: 80px;
+
+    background:
+        linear-gradient(rgba(8, 17, 31, .95),
+            rgba(8, 17, 31, .95)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920");
+
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.places-title {
+
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 60px;
+}
+
+.places-title h2 {
+
+    font-size: 55px;
+
+    color: #ffc107;
+
+    margin-bottom: 15px;
+}
+
+.places-title p {
+
+    color: #ccc;
+
+    font-size: 18px;
+}
+
+.destination-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 35px;
+}
+
+/* GLASSMORPHISM CARD */
+
+.place-card {
+
+    background:
+        rgba(255, 255, 255, .06);
+
+    backdrop-filter:
+        blur(12px);
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: .4s;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .3);
+}
+
+.place-card:hover {
+
+    transform:
+        translateY(-12px) scale(1.02);
+
+    box-shadow:
+        0 20px 50px rgba(255, 193, 7, .25);
+}
+
+.place-card img {
+
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.place-card:hover img {
+
+    transform: scale(1.08);
+}
+
+.place-content {
+
+    padding: 25px;
+}
+
+.place-content h2 {
+
+    color: #ffc107;
+
+    margin-bottom: 15px;
+
+    font-size: 30px;
+}
+
+.place-content p {
+
+    color: #ddd;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+
+.learn-btn {
+
+    display: inline-block;
+
+    background: #ffc107;
+
+    color: black;
+
+    text-decoration: none;
+
+    padding: 12px 28px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.learn-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(255, 193, 7, .5);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #08111f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffc107;
+    border-radius: 20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .explore-header h1 {
+        font-size: 45px;
+    }
+
+    .featured {
+        height: 350px;
+    }
+
+    .featured-content h1 {
+        font-size: 45px;
+    }
+
+    .places {
+        padding: 50px 20px;
+    }
+}
+
+/* ===========================
+   DESTINATION PAGE
+=========================== */
+
+.destination-hero {
+
+    height: 100vh;
+
+    position: relative;
+
+    background:
+        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1920");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.destination-overlay {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .65),
+            rgba(0, 0, 0, .65));
+}
+
+.destination-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    color: white;
+
+    max-width: 800px;
+}
+
+.destination-tagline {
+
+    color: #ffc107;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.destination-content h1 {
+
+    font-size: 100px;
+
+    color: #ffc107;
+
+    margin-bottom: 20px;
+}
+
+.destination-content p {
+
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+}
+
+.destination-btn {
+
+    display: inline-block;
+
+    background: #ffc107;
+
+    color: black;
+
+    text-decoration: none;
+
+    padding: 15px 35px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.destination-btn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(255, 193, 7, .5);
+}
+
+/* ABOUT */
+
+.about-destination {
+
+    background: #08111f;
+
+    color: white;
+
+    padding: 100px 120px;
+
+    text-align: center;
+}
+
+.about-destination h2 {
+
+    color: #ffc107;
+
+    font-size: 50px;
+
+    margin-bottom: 25px;
+}
+
+.about-destination p {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    line-height: 2;
+
+    color: #ddd;
+}
+
+/* FACTS */
+
+.facts {
+
+    background: #0c1830;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+    padding: 80px;
+}
+
+.fact-card {
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.fact-card h3 {
+
+    color: #ffc107;
+
+    margin-bottom: 10px;
+}
+
+/* ATTRACTIONS */
+
+.attractions {
+
+    background: #08111f;
+
+    padding: 100px 80px;
+}
+
+.attractions h2 {
+
+    text-align: center;
+
+    color: #ffc107;
+
+    font-size: 50px;
+
+    margin-bottom: 50px;
+}
+
+.attraction-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.attraction-card {
+
+    background: #10203b;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    color: white;
+
+    transition: .4s;
+}
+
+.attraction-card:hover {
+
+    transform: translateY(-10px);
+}
+
+.attraction-card img {
+
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+}
+
+.attraction-card h3 {
+
+    padding: 20px;
+}
+
+/* ACTIVITIES */
+
+.activities-section {
+
+    background: #0c1830;
+
+    padding: 100px;
+}
+
+.activities-section h2 {
+
+    text-align: center;
+
+    color: #ffc107;
+
+    font-size: 50px;
+
+    margin-bottom: 50px;
+}
+
+.activity-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.activity-list div {
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    transition: .3s;
+}
+
+.activity-list div:hover {
+
+    transform: translateY(-5px);
+
+    background: #ffc107;
+
+    color: black;
+}
+
+/* FOOTER */
+
+footer {
+
+    background: #04142b;
+
+    color: white;
+
+    padding-top: 60px;
+}
+
+.footer-container {
+
+    width: 90%;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 50px;
+
+    padding-bottom: 40px;
+}
+
+.footer-col h2,
+.footer-col h3 {
+
+    color: #ffc107;
+
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+
+    color: #ccc;
+
+    line-height: 1.8;
+}
+
+.footer-col a {
+
+    display: block;
+
+    color: #ccc;
+
+    text-decoration: none;
+
+    margin-bottom: 12px;
+
+    transition: .3s;
+}
+
+.footer-col a:hover {
+
+    color: #ffc107;
+}
+
+.copyright {
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, .1);
+
+    color: #aaa;
+}
+
+/* ===========================
+   GALLERY PAGE
+=========================== */
+
+.gallery-hero {
+
+    height: 60vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .6),
+            rgba(0, 0, 0, .6)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.gallery-hero h1 {
+
+    font-size: 80px;
+
+    color: #ffc107;
+
+    margin-bottom: 20px;
+}
+
+.gallery-hero p {
+
+    max-width: 700px;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+.gallery-section {
+
+    background: #08111f;
+
+    padding: 100px 80px;
+}
+
+.gallery-section h2 {
+
+    color: #ffc107;
+
+    text-align: center;
+
+    font-size: 50px;
+
+    margin-bottom: 50px;
+}
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 25px;
+}
+
+.gallery-grid img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    transition: .4s;
+
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+
+    transform:
+        scale(1.05);
+
+    box-shadow:
+        0 15px 40px rgba(255, 193, 7, .25);
+}
+
+/* ===========================
+   CONTACT PAGE
+=========================== */
+
+.contact-hero {
+
+    height: 60vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .65),
+            rgba(0, 0, 0, .65)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.contact-hero h1 {
+
+    font-size: 80px;
+
+    color: #ffc107;
+
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+
+    max-width: 700px;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+.contact-info {
+
+    background: #08111f;
+
+    padding: 80px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+}
+
+.info-card {
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    backdrop-filter: blur(10px);
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.info-card h3 {
+
+    color: #ffc107;
+
+    margin-bottom: 15px;
+}
+
+.contact-form-section {
+
+    background: #0c1830;
+
+    padding: 100px 20px;
+}
+
+.contact-form {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 25px;
+
+    padding: 40px;
+}
+
+.contact-form h2 {
+
+    color: #ffc107;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+
+    background: #10203b;
+
+    border: none;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+.contact-form button {
+
+    background: #ffc107;
+
+    color: black;
+
+    border: none;
+
+    padding: 16px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.contact-form button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(255, 193, 7, .5);
+}
+
+.fade-up {
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
